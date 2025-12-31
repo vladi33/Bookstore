@@ -41,18 +41,14 @@ The application provides a complete environment for book enthusiasts with the fo
 
     Dynamic UI: The navigation bar greets the logged-in user by their registered name or Google profile name.
 
-## 4. Public CodeSandbox Link
-
- https://codesandbox.io/p/github/vladibojhkov/Bookstore
-
- 
-
 Follow these steps to get the project up and running on your local machine:
 
 ### Prerequisites
 * **Java JDK 17** or higher
 * **Maven** (integrated in Eclipse)
 * **MySQL Server**
+
+## 4. Public CodeSandbox Link
 
  [**Bookstore on CodeSandbox**] (https://codesandbox.io/p/github/vladi33/Bookstore?branch=master)
    
