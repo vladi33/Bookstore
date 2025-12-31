@@ -1,0 +1,78 @@
+/* Общ контейнер за формите */
+.form-container {
+    background-color: #fff;
+    padding: 30px 40px;       /* вътрешен padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;        /* центриране хоризонтално и малко отстояние отгоре */
+}
+
+/* Заглавие на формата */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Етикети */
+.form-container label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: #555;
+}
+
+/* Полета за въвеждане и textarea */
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Важен за равен padding в кутията */
+}
+
+.form-container input[type="text"]:focus,
+.form-container textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-container textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Бутоните */
+.form-container button,
+.form-container .btn-back {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+.form-container button {
+    background-color: black;
+}
+
+.form-container .btn-back {
+    background-color: #555;
+}
+
+.form-container .btn-back:hover {
+    background-color: #333;
+}

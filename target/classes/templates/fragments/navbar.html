@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+      
+      <head>
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+      <head/>
+
+<nav class="navbar" th:fragment="navbar">
+
+    <div class="nav-left">
+        <a th:href="@{/}" class="logo">📚 MyBooks</a>
+    </div>
+
+  <div class="nav-right">
+
+    <div th:if="${#authorization.expression('isAnonymous()')}">
+        <a th:href="@{/}" class="nav-button">Home</a>
+        <a th:href="@{/login}" class="nav-button">Login</a>
+        <a th:href="@{/register}" class="nav-button">Register</a>
+    </div>
+
+    <div th:if="${#authorization.expression('isAuthenticated()')}">
+    
+    <span class="nav-user" th:if="${loggedUser != null}">
+    Hello, <span th:text="${loggedUser.name}"></span>
+</span>
+<span class="nav-user" th:if="${loggedUser == null and #authorization.expression('isAuthenticated()')}">
+    Hello, <span th:text="${#authentication.name}"></span>
+</span>
+        <a th:href="@{/}" class="nav-button">Home</a>
+        <a th:href="@{/books/add}" class="nav-button">Add Book</a>
+
+        <form th:action="@{/logout}" method="post" style="display:inline;">
+            <button type="submit" class="nav-button logout">Logout</button>
+        </form>
+    </div>
+
+</div>
+</nav>
+</html>

@@ -1,0 +1,149 @@
+.hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+.books-section {
+    max-width: 1300px;
+    margin: 0 auto 80px;
+    padding: 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Book card */
+.book-card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-left: 20px;
+}
+.book-card .book-image {
+	width: 300px;
+	height: 400px;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+}
+.book-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.book-link h3 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.book-link p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Cover */
+.book-cover {
+    height: 280px;
+    background: linear-gradient(135deg, #d1d5db, #9ca3af);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-placeholder {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+/* Info */
+.book-info {
+    margin-top: 14px;
+}
+
+.book-info h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.book-info .author {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+.card-buttons {
+    margin-top: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 3px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: black;
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+}
+
+.btn-delete {
+    background-color: black;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+}
+
+.btn-update,
+.btn-back {
+    padding: 8px 16px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.btn-update:hover {
+    background-color: #45a049;
+}
+
+.btn-back {
+    background-color: #555;
+    color: white;
+}
+
+.btn-back:hover {
+    background-color: #333;
+}
+
+

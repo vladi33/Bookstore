@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Book</title>
+    <link rel="stylesheet" th:href="@{/css/edit-book.css}">
+     <link rel="stylesheet" th:href="@{/css/navbar.css}">
+      <link rel="stylesheet" th:href="@{/css/base.css}">
+    
+</head>
+<body>
+
+<!-- Navbar -->
+<th:block th:replace="~{fragments/navbar :: navbar}"></th:block>
+
+<div class="form-wrapper">
+    <form class="form-container" th:action="@{/books/update}" method="post">
+        <h2>Edit Book</h2>
+
+        <input type="hidden" name="id" th:value="${book.id}">
+
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" th:value="${book.title}" required>
+
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" th:value="${book.author}" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" th:text="${book.description}" required></textarea>
+
+        <label for="image_url">Image URL</label>
+        <input type="text" id="image_url" name="imageUrl" th:value="${book.imageUrl}">
+
+        <button type="submit" class="btn-submit">Save Changes</button>
+        <a th:href="@{/}" class="btn-cancel">Cancel</a>
+    </form>
+</div>
+
+</body>
+</html>

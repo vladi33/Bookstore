@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="bg" xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBooks – Онлайн библиотека</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+<body>
+
+<!-- Navbar -->
+<th:block th:replace="~{fragments/navbar :: navbar}"></th:block>
+
+
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Открий своята следваща книга</h1>
+    <p>Каталог от подбрани заглавия</p>
+</section>
+
+<!-- Books -->
+<section class="books-section">
+
+ <div class="book-card" th:each="book : ${books}">
+
+    <a th:href="@{/books/{id}(id=${book.id})}" class="book-link">
+        <img th:src="${book.imageUrl}" alt="Book image" class="book-image">
+      <h3>
+          Заглавие:
+         <span th:text="${book.title}"></span>
+     </h3>
+
+     <p>
+         Автор:
+         <span th:text="${book.author}"></span>
+    </p>
+
+    </a>
+
+ <div class="card-buttons" 
+     th:if="${book.user != null and (
+             (#authentication.principal instanceof T(org.springframework.security.oauth2.core.user.OAuth2User) 
+              ? #authentication.principal.attributes['email'] 
+              : #authentication.name) == book.user.email)}">
+    
+    <a th:href="@{/books/edit/{id}(id=${book.id})}" class="btn-edit">Редактиране</a>
+    <a th:href="@{/books/delete/{id}(id=${book.id})}"
+       class="btn-delete"
+       onclick="return confirm('Сигурни ли сте?');">
+       Изтриване
+    </a>
+</div>
+
+</div>
+ 
+
+</section>
+
+</body>
+</html>

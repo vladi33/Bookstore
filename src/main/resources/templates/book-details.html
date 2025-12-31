@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bg" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${book.title} + ' | MyBooks'">Book Details</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/book-details.css}">
+       <link rel="stylesheet" th:href="@{/css/base.css}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<th:block th:replace="~{fragments/navbar :: navbar}"></th:block>
+
+
+<!-- MAIN CONTENT -->
+<div class="book-details-container">
+
+    <div class="book-card">
+
+        <!-- Image -->
+        <div class="book-image">
+            <img th:src="${book.imageUrl}" alt="Book Image">
+        </div>
+
+        <!-- Info -->
+        <div class="book-info">
+            <h1 th:text="${book.title}">Заглавие</h1>
+            <h3 th:text="'Автор: ' + ${book.author}">Автор</h3>
+
+            <p class="description" th:text="${book.description}">
+                Описание на книгата
+            </p>
+
+            <a href="/" class="back-btn">⬅ Назад към книгите</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

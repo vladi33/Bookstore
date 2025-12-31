@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+
+.register-container {
+    max-width: 480px;
+    margin: 100px auto;
+}
+
+.register-card {
+    background: white;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.register-card input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+}
+
+.register-card button {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+}

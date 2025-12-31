@@ -1,0 +1,90 @@
+
+
+.form-wrapper {
+	margin: auto;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+     margin: 40px auto; 
+}
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* <--- много важно */
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: #555;
+}
+
+
+
+.form-container input[type="text"]:focus,
+.form-container textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-container textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Save бутон */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: black;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-cancel {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #6c757d;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
