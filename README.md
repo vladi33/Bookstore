@@ -57,5 +57,5 @@ Follow these steps to get the project up and running on your local machine:
 ### Setup Steps
 1. **Clone the Repository:**
    ```bash
-   git clone (https://codesandbox.io/p/github/vladi33/Bookstore?branch=master)
+ [**Bookstore on CodeSandbox**] (https://codesandbox.io/p/github/vladi33/Bookstore?branch=master)
    
