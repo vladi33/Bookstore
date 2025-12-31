@@ -41,7 +41,7 @@ The application provides a complete environment for book enthusiasts with the fo
 
     Dynamic UI: The navigation bar greets the logged-in user by their registered name or Google profile name.
 
-## 4. 3. Public CodeSandbox Link
+## 4. Public CodeSandbox Link
 
  https://codesandbox.io/p/github/vladibojhkov/Bookstore
 
