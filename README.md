@@ -54,8 +54,5 @@ Follow these steps to get the project up and running on your local machine:
 * **Maven** (integrated in Eclipse)
 * **MySQL Server**
 
-### Setup Steps
-1. **Clone the Repository:**
-   ```bash
  [**Bookstore on CodeSandbox**] (https://codesandbox.io/p/github/vladi33/Bookstore?branch=master)
    
